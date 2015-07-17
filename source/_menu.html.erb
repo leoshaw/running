@@ -1,0 +1,12 @@
+<div id='menu'>
+  <ul>
+    <%= partial 'menu_item', :locals => { :title => "Index", :path => "/index.html", :clickable => active_guid != 'index' } %>
+    <li>Routes
+    <ul>
+      <% data.routes.each do |route| %>
+        <%= partial 'menu_item', :locals => { :title => route.title, :path => "/routes/#{route.page_name}.html", :clickable => route.guid != active_guid } %>
+      <% end %>
+    </ul>
+    </li>
+  </ul>
+</div>

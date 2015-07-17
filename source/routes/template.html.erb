@@ -1,0 +1,9 @@
+<h1><%= local_data[:title] %></h1>
+
+<%= partial "menu", :locals => { :active_guid => local_data[:guid] } %>
+
+<div id='content'>
+  <p><%= local_data[:preamble] %></p>
+  <iframe src="<%= local_data[:map_link] %>" width="640" height="480"></iframe>
+</div>
+
